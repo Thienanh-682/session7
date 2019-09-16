@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+        <script>
+            function Temperature(doC) {
+                this.doC=doC;
+                this.doCsangdoF = function () {
+                    return (this.doC*1.8)+32;
+                };
+                this.doCsangdoK=function () {
+                  return this.doC +273.15;
+                }
+            }
+             let temperature = new Temperature(25);
+             let doF=temperature.doCsangdoF();
+             let doK=temperature.doCsangdoK();
+             alert("Độ F là: " + doF +"." + "Độ k là :" +doK );
+
+        </script>
 </body>
 </html>
